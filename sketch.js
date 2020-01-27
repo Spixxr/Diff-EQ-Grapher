@@ -12,6 +12,10 @@ function setup() {
   orange  = color("#FF7B16")
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+  
 function draw() {
   background(back);
 }
