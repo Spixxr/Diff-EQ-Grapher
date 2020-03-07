@@ -503,29 +503,21 @@ function draw(){
 function grid(){
   stroke("#14080E");
   fill("#14080E")
-  for(let i=floor(x1); i<ceil(x2); i+=1.0/subdiv){
-    let vec = graphScreen(createVector(i,0));
-    if(abs(i)<0.5/subdiv){
-      strokeWeight(3);
+  for(let i=floor(x1); i<ceil(x2)*subdiv; i++){
+    let vec = graphScreen(createVector(i/subdiv,0));
+    if(i%subdiv == 0) {
       strokeWeight(2);
-      text(int(i),vec.x+5,height-10)
-    } else if(abs(i-int(i))<0.9/subdiv) {
-      strokeWeight(2);
-      text(int(i),vec.x+5,height-10)
+      text(int(i/subdiv),vec.x+5,height-10)
     } else {
       strokeWeight(1);
     }
     line(vec.x,0,vec.x,height);
   }
-  for(let j=floor(y1); j<ceil(y2); j+=1.0/subdiv){
-    let vec = graphScreen(createVector(0,j));
-    if(abs(j)<0.5/subdiv){
-      strokeWeight(3);
+  for(let j=floor(y1); j<ceil(y2)*subdiv; j++){
+    let vec = graphScreen(createVector(0,j/subdiv));
+    if(j%subdiv==0) {
       strokeWeight(2);
-      text(int(j),10,vec.y-5)
-    } else if(abs(j-int(j))<0.9/subdiv) {
-      strokeWeight(2);
-      text(int(j),10,vec.y-5)
+      text(int(j/subdiv),10,vec.y-5)
     } else {
       strokeWeight(1);
     }
