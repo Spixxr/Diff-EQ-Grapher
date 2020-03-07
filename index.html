@@ -9,15 +9,15 @@
         <div id="mySidebar" class="sidebar">
             <button class="closebtn" onclick="closeNav()">&times;</button>
             <div class="sidetext">dy/dt</div>
-            <input type="text" id="dy" value="x" size="10" autocomplete="off">
+            <input type="text" id="dy" value="2*y - y*x" size="10" autocomplete="off">
             <div class="sidetext">dx/dt</div>
-            <input type="text" id="dx" value="1" size="10" autocomplete="off">
+            <input type="text" id="dx" value="x*y-2*x" size="10" autocomplete="off">
             <div class="sidetext">Initial Value</div>
-            <input type="text" id="init" value="0,0" size="10" autocomplete="off">
+            <input type="text" id="init" value="1,1" size="10" autocomplete="off">
             <div class="sidetext">Domain</div>
-            <input type="text" id="domain" value="-8,8" size="10" autocomplete="off">
+            <input type="text" id="domain" value="-1,19.5" size="10" autocomplete="off">
             <div class="sidetext">Range</div>
-            <input type="text" id="range" value="-4.5,4.5" size="10" autocomplete="off">
+            <input type="text" id="range" value="-0.5,9.5" size="10" autocomplete="off">
             <div class="sidetext">Sub-divisions</div>
             <input type="range" id="scale" min=1 max=5 value=1 step=1 onmouseup="slider()">
             <ul class="labels">
